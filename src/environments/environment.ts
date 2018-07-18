@@ -1,9 +1,15 @@
+/*
+ * (c)Viavi Solutions 2018
+ * Last modified: Tuesday, 17th July 2018 10:11:50 pm
+ * Author: Valentin Raduti (deroude@gmail.com>)
+ */
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API_ROOT:"http://localhost:3001"
 };
 
 /*

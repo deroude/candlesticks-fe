@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <span>Candlestick viewer</span>
+</mat-toolbar>
+<mat-card>
+  <mat-form-field>
+    <input type="number" matInput placeholder="Window size" [(ngModel)]="maxSize">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" matInput placeholder="Poll interval (ms)" [(ngModel)]="pollInterval">
+  </mat-form-field>
+  <button mat-button (click)="update()">Update</button>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <app-candlestick-chart [data]="data$|async" [maxSize]="maxSize"></app-candlestick-chart>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
